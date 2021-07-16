@@ -5,7 +5,7 @@ export default function Header() {
 
 	return (
 		// items-center : center all items on the Y axis 
-		<div className='sticky top-0 z-50 flex items-center px-4 py-2 shadow-md'>
+		<div className='sticky top-0 z-50 flex items-center px-4 shadow-md'>
 			<Button
 				color="gray"
 				buttonType="outline"
@@ -14,12 +14,12 @@ export default function Header() {
 				ripple="dark"
 				className="md:inline-flex h-20 w-20 border-0"
 				>
-				<Icon name="menu" size="3xl" />
+				<Icon name="menu" size="2xl" />
 				</Button>
-			<Icon name="description" size="5xl" color="blue"/>
+			<Icon name="description" size="4xl" color="blue"/>
 			<h1 className="text-gray-700 text-2xl ml-2">Docs</h1>
 			<div className="bg-gray-100 rounded-lg flex items-center flex-grow focus-within:shadow-md px-5 py-2 mx-5"> 
-				<Icon name="search" size="3xl" color="gray"/>
+				<Icon name="search" size="2xl" color="gray"/>
 				<input type="text" placeholder="Search" className="text-color-500  bg-transparent outline-none flex-grow px-4" />
 			</div>
 			<Button
