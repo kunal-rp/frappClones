@@ -1,7 +1,11 @@
 import Button from "@material-tailwind/react/Button"
 import Icon from "@material-tailwind/react/Icon"
 
+import { signOut, useSession } from 'next-auth/client'
+
 export default function Header() {
+
+	const [session] = useSession();
 
 	return (
 		// items-center : center all items on the Y axis 
@@ -38,8 +42,9 @@ export default function Header() {
 				rounded={true}
 				iconOnly={true}
 				className="md:inline-flex border-0"
+				onClick={() => signOut()}
 				>
-				<Icon name="account_circle" size="4xl" color="gray" className="cursor-pointer"/>
+				{session.user.image ? < img loading="lazy" className="cursor-pointer rounded-full" src={session?.user?.image} /> :  <Icon name="account_circle" size="4xl" color="gray" className="cursor-pointer"/> }
 			</Button>
 		</div>
 	);
