@@ -37,4 +37,4 @@ yarn-error.log*
 # MacOS
 .DS_Store
 
-env.local
+.env.local
