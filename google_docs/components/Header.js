@@ -1,7 +1,7 @@
 import Button from "@material-tailwind/react/Button"
 import Icon from "@material-tailwind/react/Icon"
 
-import { signOut, useSession } from 'next-auth/client'
+import { signIn, signOut, useSession } from 'next-auth/client'
 
 export default function Header() {
 
@@ -33,6 +33,7 @@ export default function Header() {
 				iconOnly={true}
 				ripple="dark"
 				className="md:inline-flex h-20 w-20 border-0"
+				onClick={() => signIn()}
 				>
 				<Icon name="apps" size="4xl"/>
 			</Button>
