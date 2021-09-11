@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Home from '../components/Home'
 
-export default function Home() {
+export default function Index() {
   return (
     <div className="flex">
       <Head>
@@ -13,10 +14,9 @@ export default function Home() {
         />
       </Head>
 
-      <main className="flex w-full">
-          <div className="w-full pl-2 pr-2 md:max-w-screen-2xl mx-auto">
-            <Header/>
-         </div>
+      <main >
+        <Header/>
+        <Home />
       </main>
 
       <footer >
