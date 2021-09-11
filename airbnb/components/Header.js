@@ -21,7 +21,7 @@ export default function Header() {
 			</div>
 			<div className="mx-auto flex-grow max-w-sm">
 				<div className="items-center flex rounded-full pl-3 pr-3 pt-2 pb-2 border-2 shadow-sm">
-					<input type="text" placeholder="Search" className="flex-grow"/>
+					<input type="text" placeholder="Search" className="flex-grow pl-2 pr-2"/>
 					<div className="bg-red-500 rounded-full w-8 h-8 flex items-center justify-center">
 					  <Icon name="search" size="lg" color="white" />
 					</div>
