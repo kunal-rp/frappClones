@@ -35,7 +35,7 @@ export default function Header() {
 
 	function liveanywherePlace(img, name) {
 		return (
-			<div className="flex-col ml-5">
+			<div className="flex-col mr-5">
 				<Image 
 					src={img}
 					className="wrounded-xl object-scale-down"
@@ -80,6 +80,23 @@ export default function Header() {
 				<div className="relative flex flex-row mt-5">
 					{anywhereOptions.map(place => liveanywherePlace(place[0],place[1]))}
 				</div>)}
+			{section("",
+				<div className="relative">
+					<Image 
+						src='try_hosting.png'
+						className="rounded-md w-full hidden sm:block"
+		            	alt="icon" />
+		            <Image 
+						src='try_hosting_sm.png'
+						className="rounded-md w-full sm:hidden"
+		            	alt="icon" />
+		            <div className="absolute top-1/4 sm:top-1/3 text-white ml-20 max-w-xs"> 
+		            	<p className="text-5xl">Try Hosting</p>
+		            	<p className="text-ls mt-5">Earn Extra income and unlock new opportunities by sharing your space</p>
+		            	<button className="rounded-md bg-white text-lg text-black pl-4 pr-4 pt-3 pb-3 mt-5"> Learn More </button>
+		            </div>
+	            </div>
+	            	)}
 			
 		</div>
 	);
