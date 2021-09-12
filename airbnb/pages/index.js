@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Home from '../components/Home'
 
 export default function Index() {
@@ -17,10 +18,10 @@ export default function Index() {
       <main>
         <Header/>
         <Home />
+        <Footer/>
       </main>
 
       <footer >
-        
       </footer>
     </div>
   )
