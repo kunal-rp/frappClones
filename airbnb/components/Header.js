@@ -4,8 +4,8 @@ import Icon from "@material-tailwind/react/Icon";
 export default function Header() {
 
 	return (
-		<div className="w-screen border-b-2 shadow-lg">
-			<div className="flex sticky top-0 z-50 w-full pt-5 md:pt-5 pb-5 pl-5 pr-5 items-center md:max-w-screen-2xl mx-auto ">
+		<div className="sticky top-0 z-50 w-screen border-b-2 shadow-lg bg-white">
+			<div className="flex w-full pt-5 md:pt-5 pb-5 pl-5 pr-5 items-center md:max-w-screen-xl mx-auto ">
 				<div className="w-24 hidden lg:block">
 					<Image 
 					src="airbnb_full.png"

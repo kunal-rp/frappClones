@@ -14,7 +14,7 @@ export default function Index() {
         />
       </Head>
 
-      <main >
+      <main>
         <Header/>
         <Home />
       </main>
