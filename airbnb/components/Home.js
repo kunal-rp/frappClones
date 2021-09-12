@@ -1,4 +1,5 @@
 import Image from "@material-tailwind/react/Image";
+import Getaway from './Getaway'
 
 export default function Header() {
 
@@ -18,6 +19,12 @@ export default function Header() {
 		["pa_option.jpeg", "Pet allowed"],
 	];
 
+	const discoverOptions = [
+		["e_option.jpeg", "Experiences", "Find unforgettable activities near you."],
+		["onl_option.jpeg", "Online Experiences", "Live, interactive activities lead by Hosts."],
+		["out_option.jpeg", "Outdoor Experiences", "Experiences that immerse you in nature."],
+	];
+
 	function explorePlace(img, name, dist) {
 		return (
 			<div className="flex">
@@ -33,7 +40,7 @@ export default function Header() {
 		)
 	}
 
-	function liveanywherePlace(img, name) {
+	function option(img, name, desc) {
 		return (
 			<div className="flex-col mr-5">
 				<Image 
@@ -41,6 +48,7 @@ export default function Header() {
 					className="wrounded-xl object-scale-down"
 	            	alt="icon"/>
 	            	<p className="text-lg">{name}</p>
+	            	{desc ? <p className="text-sm">{desc}</p> : <div />}
 			</div>
 		)
 	}
@@ -78,7 +86,7 @@ export default function Header() {
 				</div>)}
 			{section("Live Anywhere",
 				<div className="relative flex flex-row mt-5">
-					{anywhereOptions.map(place => liveanywherePlace(place[0],place[1]))}
+					{anywhereOptions.map(op => option(op[0],op[1]))}
 				</div>)}
 			{section("",
 				<div className="relative">
@@ -97,6 +105,14 @@ export default function Header() {
 		            </div>
 	            </div>
 	            	)}
+			{section("Discover things to do",
+				<div className="relative flex flex-row mt-5">
+					{discoverOptions.map(op => option(op[0],op[1], op[2]))}
+				</div>)}
+			{section("Inspiration for future getaways",
+				<div className="relative flex flex-row mt-5">
+					<Getaway/>
+				</div>)}
 			
 		</div>
 	);
