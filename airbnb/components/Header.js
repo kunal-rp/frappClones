@@ -4,8 +4,8 @@ import Icon from "@material-tailwind/react/Icon";
 export default function Header() {
 
 	return (
-		<div className="sticky top-0 z-50 w-screen border-b-2 shadow-lg bg-white">
-			<div className="flex w-full pt-5 md:pt-5 pb-5 pl-5 pr-5 items-center md:max-w-screen-xl mx-auto ">
+		<div className="sticky top-0 z-50 w-full sm:w-screen border-b-2 shadow-lg bg-white">
+			<div className="flex w-full pt-3 md:pt-5 pb-2 pl-5 pr-5 items-center md:max-w-screen-xl mx-auto ">
 				<div className="w-24 hidden lg:block">
 					<Image 
 					src="airbnb_full.png"
@@ -20,9 +20,9 @@ export default function Header() {
 	            	raised={false}
 	            	alt="logo" />
 				</div>
-				<div className="mx-auto flex-grow  max-full sm:max-w-sm ">
-					<div className="items-center flex rounded-full pl-3 pr-3 pt-2 pb-2 border-2 shadow-sm">
-						<input type="text" placeholder="Search" className="flex-grow pl-2 pr-2"/>
+				<div className="mx-auto flex-grow sm:max-w-xs ">
+					<div className="items-center flex rounded-full pl-3 pr-3 pt-2 pb-2 border-2 shadow-sm hover:shadow-lg cursor-pointer">
+						<p className="flex-grow pl-2 pr-2 text-sm"> Start your Search </p>
 						<div className="bg-red-500 rounded-full w-8 h-8 flex items-center justify-center">
 						  <Icon name="search" size="lg" color="white" />
 						</div>

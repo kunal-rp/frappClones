@@ -29,7 +29,7 @@ export default function Getaway() {
 	function createButton(text, index){
 		return (
 			<button 
-				className="mr-3 text-gray-500 hover:bg-gray-100 p-2 rounded-md focus:text-black focus:border-b-2 focus:border-black"
+				className="mr-3 text-gray-500 hover:bg-gray-100 p-2 rounded-md focus:text-black focus:border-b-2 focus:border-black flex-shrink-0"
 				onClick={() => setActiveOption(index)}
 				> {text}</button>
 		);
@@ -38,10 +38,10 @@ export default function Getaway() {
 
 	return (
 		<div className="divide-y w-full ">
-			<div>
+			<div className="flex overflow-x-scroll">
 				{buttons.map((but, index) => createButton(but[0], index))}
 			</div>
-			<div className="grid grid-cols-4 pt-7">
+			<div className="grid grid-cols-2 md:grid-cols-4 pt-7">
 				{buttons[activeOption][1].map(place => createPlace(place[0],place[1]))}
 			</div>
 		</div>)

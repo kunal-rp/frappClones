@@ -27,7 +27,7 @@ export default function Header() {
 
 	function explorePlace(img, name, dist) {
 		return (
-			<div className="flex">
+			<div className="flex flex-shrink-0">
 				<Image 
 					src={img}
 					className="h-20 rounded-md"
@@ -81,7 +81,7 @@ export default function Header() {
 	            </div> 
 			</div>
 			{section("Explore nearby",
-				<div className="flex mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+				<div className="flex mt-5 grid grid-rows-2 grid-flow-col overflow-auto flex-shrink-0">
 					{places.map(place => explorePlace(place[0],place[1],place[2]))}
 				</div>)}
 			{section("Live Anywhere",
