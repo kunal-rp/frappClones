@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary-blue': '#232f3e',
+      },
       flexGrow: {
         '2': 2,
         '5': 5
